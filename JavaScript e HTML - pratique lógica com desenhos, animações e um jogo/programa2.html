@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+<style>
+body {
+  background-color: #272424;
+}
+</style>
+
+<canvas width="600" height="400"></canvas>
+
+<script>
+    function criarQuadrado(x, y, cor){
+        var tela = document.querySelector("canvas");
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = cor;
+        pincel.fillRect(x, y, 50, 50);
+        pincel.fillStroke = cor;
+        pincel.strokeRect (x, y, 50, 50);
+    }
+
+    var x = 0;
+    var y = 0;
+    
+    while(x<600){
+
+        criarQuadrado(x, 0, 'lightblue');
+        criarQuadrado(x, 50, 'lightpink');
+        x = x+50;
+
+    }
+
+    for (var i = 0; i<600; i=i+50){
+        criarQuadrado(i, 200, 'lightgreen');
+    }
+
+</script>

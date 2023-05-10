@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+<style>
+body {
+  background-color: #767575;
+}
+</style>
+<script>
+    alert("oiii");
+    document.write("bom dia ");
+    document.write(" <br> hoje é dia 0"+(5+1));
+    var mes = 05;
+    document.write("<br> mês: "+mes+"<br>");
+
+    function digaHora (hora, min){
+        var pString = "São "+hora+":"+min;
+        return pString;
+    }
+
+    function mostra (variavel){
+      document.write("<br>");
+      document.write(variavel);
+    }
+
+    function nasceu(idade){
+      mostra ("você nasceu em:");
+      return 2023-idade;
+    }
+
+    mostra(digaHora(17,55));
+
+    var digitarNome = prompt("Digite seu nome: ");
+    var digitarIdade = prompt("Digite sua idade: ");
+
+    mostra (digitarNome);
+    mostra(digitarIdade);
+    mostra(nasceu(digitarIdade));
+
+
+
+</script>

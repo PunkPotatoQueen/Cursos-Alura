@@ -1,0 +1,72 @@
+<meta charset="UTF-8">
+<style>
+body {
+  background-color: #767575;
+}
+</style>
+
+<script>
+    document.write("Tente adivinhar o número gerado: <br><br>");
+</script>
+
+<input/>
+<button> "Comparar" </button>
+
+<script>
+    //var numero = Math.round(Math.random()*10);
+
+    function sorteio (){
+        return (Math.round(Math.random()*10));
+    }
+
+    function sorteiaNumeros(quantidade){
+        var lista = [];
+        for (var i = 0; i<quantidade; i++){
+            var numeroGerado = sorteio();
+            if (numeroGerado!=0){
+                    var achou = false;
+                    for (var posicao = 0; posicao < lista.length; posicao++){
+                        if (lista[posicao]==numeroGerado){
+                            achou = true;
+                            break;
+                        }
+                    }
+                    if (achou == false){
+                        lista.push (numeroGerado);
+                        i--;
+                    }
+            }
+        }
+        return lista;
+    }
+
+    var array = sorteiaNumeros(5);
+
+    var input = document.querySelector("input");
+    input.focus();
+
+    function teste (){
+
+        var achou = false;
+
+        for (var posicao = 0; posicao < array.length ; posicao++){
+            if (input.value == array[posicao]){
+                alert("Você acertou!");
+                achou = true;
+                break;
+            }          
+        }
+
+        if (achou==false){
+            alert("Você errou!");
+        }
+    }
+
+        input.value = "";
+        input.focus();
+    
+
+    var botao = document.querySelector("button");
+    botao.onclick = teste;
+   
+</script>

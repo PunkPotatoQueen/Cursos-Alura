@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+<style>
+body {
+  background-color: #767575;
+}
+</style>
+<script>
+
+    function mostra (variavel){
+      document.write("<br>");
+      document.write(variavel);
+    }
+
+        var numeroPensado = Math.round(Math.random()*10);
+        var chute = parseInt(prompt("Digite seu chute: "));
+
+    var teste = true;
+
+    while (teste){
+
+        if (chute==numeroPensado){
+        mostra ("Você acertou!");
+        teste = false;
+        }
+
+        else {
+        mostra ("Você errou, o número pensado foi " + numeroPensado);
+
+        var numeroPensado = Math.round(Math.random()*10);
+        var chute = parseInt(prompt("Você errou. Digite mais um chute: "));
+        }
+
+    }
+</script>
