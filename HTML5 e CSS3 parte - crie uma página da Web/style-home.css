@@ -1,5 +1,6 @@
 body{
-    background-color: bisque;
+    background-color: grey;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #banner{
@@ -32,12 +33,12 @@ em strong{
 }
 
 .beneficios{
-    background-color: rgb(238, 176, 110);
+    background-color: white;
     padding: 20px;
 }
 
 .principal{
-    background-color: rgb(158, 103, 35);
+    background-color: grey;
     padding: 30px;
 }
 
